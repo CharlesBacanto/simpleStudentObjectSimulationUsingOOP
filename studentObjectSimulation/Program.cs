@@ -3,12 +3,29 @@
     class Program
     {
         static void Main(string[] args)
-        {
-            
-            Student s1 = new Student("Charles", "Bacanto", "Graduate", "BSCPE", "CPE4-A", 98.5f, 95.12f);
+        {   
+            //Prompt the user to enter required inputs and store in a variable
+            Console.Write("First Name: ");
+            string firstName = Console.ReadLine();
+            Console.Write("Last Name: ");
+            string lastName = Console.ReadLine();
+            Console.Write("Year: ");
+            string year = Console.ReadLine();
+            Console.Write("Course: ");
+            string course = Console.ReadLine();
+            Console.Write("Section: ");
+            string section = Console.ReadLine();
+            Console.Write("Mid Term Grade: ");
+            float midterm = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Final Grade: ");
+            float finals = Convert.ToSingle(Console.ReadLine());
 
-            s1.introduceSelf();
-            Console.Write(s1.evaluateGrade());
+            //Student Object Constructor
+            Student s1 = new Student(firstName, lastName, year, course, section,midterm, finals);
+
+            Console.WriteLine(); // Space
+            s1.introduceSelf(); // Object Method 
+            Console.Write(s1.evaluateGrade()); // Return Object Method  Value 
         }
     }
 }
