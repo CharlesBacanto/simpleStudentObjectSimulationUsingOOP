@@ -29,34 +29,26 @@ namespace studentObjectSimulation
         //Class Method for introducing the student
         public void introduceSelf()
         {
-            Console.WriteLine("I 'am " + firstName + " " + lastName+ " a " + course+ " "+ year+ " from " + section);
+            Console.WriteLine("I 'am " + firstName + " " + lastName);
+            Console.WriteLine("Course: " + course);
+            Console.WriteLine("Year: "  + year);
+            Console.WriteLine("Section: " + section);
         }
 
         //Class Method for computing average grade
-        public string evaluateGrade()
+        public void evaluateGrade()
         {   
 
             //Arithmetic Formula to get the Average
             float Average = (midtermGrade + finalGrade) / 2;
-            
-
-            //Switch Case to determine status
-            switch (Average)
-            {
-                case (>= 90):
-                    return "Honor";
-            
-                   
-                case (>= 75):
-                    return "Passed";
-
-                case (>= 1):
-                    return "Failed";
-                default:
-                    return "Not Applicable";
 
 
-            }
+            if (Average > 100) Console.WriteLine("Invalid Grade");
+            else if (Average >= 98) Console.WriteLine("Highest Honor");
+            else if (Average >= 95) Console.WriteLine("High Honor");
+            else if (Average >= 90) Console.WriteLine("Honor");
+            else if (Average >= 75) Console.WriteLine("Passed");
+            else Console.WriteLine("Failed");
         }
     }
 }

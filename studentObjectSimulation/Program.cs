@@ -23,9 +23,9 @@
             //Student Object Constructor
             Student s1 = new Student(firstName, lastName, year, course, section,midterm, finals);
 
-            Console.WriteLine(); // Space
+            Console.WriteLine();// Space
             s1.introduceSelf(); // Object Method 
-            Console.Write(s1.evaluateGrade()); // Return Object Method  Value 
+            s1.evaluateGrade(); // Object Method 
         }
     }
 }
